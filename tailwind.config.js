@@ -5,7 +5,20 @@ module.exports = {
   darkMode: false,
   theme: {
     extend: {
-      colors
+      colors,
+      fontFamily: {
+        sans: [
+          'Inter',
+          '-apple-system',
+          'BlinkMacSystemFont',
+          'Segoe UI',
+          'Roboto',
+          'Ubuntu',
+          'Arial',
+          'Helvetica Neue',
+          'sans-serif'
+        ]
+      }
     }
   },
   variants: {

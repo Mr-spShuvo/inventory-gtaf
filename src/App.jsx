@@ -1,10 +1,14 @@
-import { ArrowDownIcon } from './assets/icons';
-import colors from './data/colors.json';
+import Header from './common/Header';
+import Layout from './common/Layout';
+import Inventory from './pages/Inventory';
 
 function App() {
   return (
-    <div className="bg-neutral-900 flex items-center justify-center h-screen">
-      <ArrowDownIcon fill={colors.primary[500]} width={48} height={48} />
+    <div className="bg-neutral-200 min-h-screen">
+      <Header />
+      <Layout title="Inventory">
+        <Inventory />
+      </Layout>
     </div>
   );
 }
