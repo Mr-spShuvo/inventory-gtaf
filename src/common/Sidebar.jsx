@@ -19,7 +19,7 @@ const Sidebar = () => {
             to={item.path}
           >
             {item.icon}
-            <span className=""> {item.title} </span>
+            {item.title}
           </NavLink>
         </li>
       ))}
