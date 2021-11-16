@@ -1,0 +1,110 @@
+[
+  {
+    "title": "Hammer",
+    "details": "This is a hammer to do work with",
+    "status": "success",
+    "updatedOn": "11 Oct 2021",
+    "stock": 200,
+    "total": 300,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "This is a Screw to do work with",
+    "status": "success",
+    "updatedOn": "10 Nov 2021",
+    "stock": 122,
+    "total": 230,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "Wood plan will be used to do woodworks, duh",
+    "status": "warning",
+    "updatedOn": "06 Nov 2021",
+    "stock": 100,
+    "total": 300,
+    "unitPrice": 1.5
+  },
+  {
+    "title": "Hammer",
+    "details": "",
+    "status": "error",
+    "updatedOn": "28 Oct 2021",
+    "stock": 0,
+    "total": 200,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "",
+    "status": "error",
+    "updatedOn": "22 Oct 2021",
+    "stock": 0,
+    "total": 200,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "",
+    "status": "error",
+    "updatedOn": "16 Oct 2021",
+    "stock": 0,
+    "total": 200,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "This is a hammer to do work with",
+    "status": "success",
+    "updatedOn": "9 Oct 2021",
+    "stock": 200,
+    "total": 300,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "This is a hammer to do work with",
+    "status": "success",
+    "updatedOn": "5 Oct 2021",
+    "stock": 200,
+    "total": 300,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "This is a hammer to do work with",
+    "status": "success",
+    "updatedOn": "1 Oct 2021",
+    "stock": 200,
+    "total": 300,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "This is a hammer to do work with",
+    "status": "warning",
+    "updatedOn": "23 Sep 2021",
+    "stock": 200,
+    "total": 300,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "",
+    "status": "error",
+    "updatedOn": "16 Oct 2021",
+    "stock": 0,
+    "total": 200,
+    "unitPrice": 10
+  },
+  {
+    "title": "Hammer",
+    "details": "This is a hammer to do work with",
+    "status": "success",
+    "updatedOn": "9 Oct 2021",
+    "stock": 200,
+    "total": 300,
+    "unitPrice": 10
+  }
+]

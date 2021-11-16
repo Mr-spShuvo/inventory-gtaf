@@ -3,6 +3,26 @@ import SearchBox from '../common/SearchBox';
 import { ArrowDownIcon, ArrowSortIcon, AngleLeftIcon, AngleRightIcon } from '../assets/icons';
 import { Link } from 'react-router-dom';
 
+import data from '../data/inventory.json';
+
+const getStatus = status => {
+  const inventoryStatus = {
+    color: '',
+    info: ''
+  };
+  if (status === 'success') {
+    inventoryStatus.color = 'bg-primary-500';
+    inventoryStatus.info = 'Active';
+  } else if (status === 'warning') {
+    inventoryStatus.color = 'bg-warning-500';
+    inventoryStatus.info = 'In Progress';
+  } else if (status === 'error') {
+    inventoryStatus.color = 'bg-error-500';
+    inventoryStatus.info = 'Out of Stock';
+  }
+  return inventoryStatus;
+};
+
 const Inventory = () => {
   return (
     <div className="bg-white rounded">
@@ -32,23 +52,27 @@ const Inventory = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="text-left">
-              <th className="py-6 pl-6 pr-8 w-4">
-                <Checkbox />
-              </th>
-              <td>11 Nov 2021</td>
-              <td>Hammer</td>
-              <td>This is a hammer to do work with</td>
-              <td>
-                Alright
-                <span className="inline-block ml-2 w-2 h-2 rounded-full bg-primary-500"></span>
-              </td>
-              <td className="text-right">
-                <span className="font-bold">200</span>/300
-              </td>
-              <td className="text-right">$10</td>
-              <td className="text-right pr-6">$2000.00</td>
-            </tr>
+            {data.map(({ title, updatedOn, details, status, stock, total, unitPrice }) => (
+              <tr className="text-left">
+                <th className="py-6 pl-6 pr-8 w-4">
+                  <Checkbox />
+                </th>
+                <td>{updatedOn}</td>
+                <td>{title}</td>
+                <td>{details ? details : '-'}</td>
+                <td>
+                  {getStatus(status).info}
+                  <span
+                    className={`inline-block ml-2 w-2 h-2 rounded-full ${getStatus(status).color}`}
+                  ></span>
+                </td>
+                <td className="text-right">
+                  <span className="font-bold">{stock}</span>/{total}
+                </td>
+                <td className="text-right">${unitPrice}</td>
+                <td className="text-right pr-6">${stock * unitPrice}.00</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>

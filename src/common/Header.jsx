@@ -11,7 +11,7 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-white px-10 flex py-4 border-b border-neutral-300 w-screen fixed top-0">
+    <div className="bg-white px-10 flex py-4 border-b border-neutral-300 w-screen fixed top-0 z-10">
       <button className="flex items-center w-52 gap-2.5">
         <h1 className="font-semibold text-sm tracking-tight">Starbucks</h1>
         <DropDownIcon />
