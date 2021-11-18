@@ -2,7 +2,7 @@ import Sidebar from './Sidebar';
 
 const Layout = ({ title = '', children }) => {
   return (
-    <div className="flex min-h-full mt-20">
+    <div className="flex min-h-screen mt-20">
       <div className="w-72 px-2 border-r border-neutral-300 relative">
         <div className="p-4 sticky left-0 top-20">
           <Sidebar />

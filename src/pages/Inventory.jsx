@@ -1,29 +1,47 @@
+import { useState, useEffect } from 'react';
+import _ from 'lodash';
+
+import { getInventoryStatus as getStatus, getPaginateData } from '../utils';
+import { ArrowDownIcon, ArrowSortIcon, AngleLeftIcon, AngleRightIcon } from '../assets/icons';
+
 import Checkbox from '../common/Checkbox';
 import SearchBox from '../common/SearchBox';
-import { ArrowDownIcon, ArrowSortIcon, AngleLeftIcon, AngleRightIcon } from '../assets/icons';
-import { Link } from 'react-router-dom';
-
-import data from '../data/inventory.json';
-
-const getStatus = status => {
-  const inventoryStatus = {
-    color: '',
-    info: ''
-  };
-  if (status === 'success') {
-    inventoryStatus.color = 'bg-primary-500';
-    inventoryStatus.info = 'Active';
-  } else if (status === 'warning') {
-    inventoryStatus.color = 'bg-warning-500';
-    inventoryStatus.info = 'In Progress';
-  } else if (status === 'error') {
-    inventoryStatus.color = 'bg-error-500';
-    inventoryStatus.info = 'Out of Stock';
-  }
-  return inventoryStatus;
-};
 
 const Inventory = () => {
+  const [inventories] = useState(() => require('../data/inventory.json'));
+  const [data, setData] = useState([]);
+  const [pagination, setPagination] = useState({
+    perPage: 5,
+    currentPage: 1
+  });
+
+  useEffect(() => {
+    const data = getPaginateData(inventories, pagination.currentPage, pagination.perPage);
+    setData(data);
+  }, [inventories, pagination.currentPage, pagination.perPage]);
+
+  const handlePerPage = e => {
+    setPagination(pagination => ({ ...pagination, perPage: e.target.value }));
+  };
+
+  const handlePageJump = e => {
+    setPagination(pagination => ({
+      ...pagination,
+      currentPage: e.target.value
+    }));
+  };
+
+  const handlePageChange = type => {
+    if (pagination.currentPage <= 1 && type === 'prev') return;
+    else if (inventories.length / pagination.perPage <= pagination.currentPage && type === 'next')
+      return;
+    console.log(inventories.length / pagination.perPage);
+    setPagination(pagination => ({
+      ...pagination,
+      currentPage: type === 'prev' ? pagination.currentPage - 1 : pagination.currentPage + 1
+    }));
+  };
+
   return (
     <div className="bg-white rounded">
       <div className="p-6">
@@ -78,25 +96,40 @@ const Inventory = () => {
       </div>
       <div className="p-6">
         <div className="flex justify-between text-neutral-600">
-          <select class="pl-4 pr-16 py-2  border-neutral-400 text-sm shadow rounded focus:ring-success-500 focus:shadow-none focus:border-success-500 hover:bg-neutral-100">
+          <select
+            class="pl-4 pr-16 py-2  border-neutral-400 text-sm shadow rounded focus:ring-success-500 focus:shadow-none focus:border-success-500 hover:bg-neutral-100"
+            value={pagination.perPage}
+            onChange={handlePerPage}
+          >
+            <option value="5">5 Items per page</option>
             <option value="10">10 Items per page</option>
+            <option value="20">20 Items per page</option>
+            <option value="40">40 Items per page</option>
           </select>
           <div className="flex gap-4 items-center">
-            <select class="pl-4 pr-16 py-2 border-neutral-400 text-sm shadow rounded focus:ring-success-500 focus:shadow-none focus:border-success-500 hover:bg-neutral-100">
-              <option value="10">Page 1 of 5</option>
+            <select
+              class="pl-4 pr-16 py-2 border-neutral-400 text-sm shadow rounded focus:ring-success-500 focus:shadow-none focus:border-success-500 hover:bg-neutral-100"
+              value={pagination.currentPage}
+              onChange={handlePageJump}
+            >
+              {_.range(1, inventories.length / pagination.perPage + 1).map(data => (
+                <option value={data}>
+                  Page {data} of {Math.ceil(inventories.length / pagination.perPage)}
+                </option>
+              ))}
             </select>
-            <Link
+            <button
               className="p-1.5 border border-neutral-400 shadow rounded hover:bg-neutral-100"
-              to="#"
+              onClick={() => handlePageChange('prev')}
             >
               <AngleLeftIcon />
-            </Link>
-            <Link
+            </button>
+            <button
               className="p-1.5 border border-neutral-400 shadow rounded hover:bg-neutral-100"
-              to="#"
+              onClick={() => handlePageChange('next')}
             >
               <AngleRightIcon />
-            </Link>
+            </button>
           </div>
         </div>
       </div>
