@@ -1,8 +1,5 @@
 export const getInventoryStatus = status => {
-  const inventoryStatus = {
-    color: '',
-    info: ''
-  };
+  const inventoryStatus = { color: '', info: '' };
   if (status === 'success') {
     inventoryStatus.color = 'bg-primary-500';
     inventoryStatus.info = 'Active';

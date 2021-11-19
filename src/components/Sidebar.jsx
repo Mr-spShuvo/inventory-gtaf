@@ -10,16 +10,16 @@ const menu = [
 
 const Sidebar = () => {
   return (
-    <ul className="flex flex-col gap-7 ">
+    <ul className="flex justify-between sm:flex-col sm:justify-start gap-7 bg-white sm:bg-transparent fixed sm:relative bottom-0 left-0 sm:bottom drop-shadow-2xl border-t border-neutral-200">
       {menu.map(item => (
-        <li className="text-neutral-700 font-medium" key={item.path}>
+        <li key={item.path} className="text-neutral-700 font-medium">
           <NavLink
-            activeClassName="text-primary-500 bg-white shadow-sm border-neutral-300"
-            className="flex gap-2.5 p-4 transition-all hover:text-primary-500 hover:bg-white hover:shadow-sm hover:border-neutral-300 border-b-2 border-transparent rounded-md"
             to={item.path}
+            activeClassName="text-primary-500 bg-white shadow-sm border-neutral-300"
+            className="inline-flex lg:w-full gap-2.5 p-4 transition-all hover:text-primary-500 hover:bg-white hover:shadow-sm hover:border-neutral-300 border-b-2 border-transparent rounded-md"
           >
             {item.icon}
-            {item.title}
+            <span className="hidden lg:inline-block">{item.title}</span>
           </NavLink>
         </li>
       ))}

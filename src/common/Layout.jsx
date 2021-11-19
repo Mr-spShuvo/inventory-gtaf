@@ -1,9 +1,9 @@
-import Sidebar from './Sidebar';
+import Sidebar from '../components/Sidebar';
 
 const Layout = ({ title = '', children }) => {
   return (
-    <div className="flex min-h-screen mt-20">
-      <div className="w-72 px-2 border-r border-neutral-300 relative">
+    <div className="flex flex-col sm:flex-row min-h-screen mt-16 sm:mt-20">
+      <div className="lg:w-72 pt-8 px-2 border-r border-neutral-300 relative">
         <div className="p-4 sticky left-0 top-20">
           <Sidebar />
         </div>

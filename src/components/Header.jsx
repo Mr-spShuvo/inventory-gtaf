@@ -11,15 +11,17 @@ const Header = () => {
   };
 
   return (
-    <div className="bg-white px-10 flex py-4 border-b border-neutral-300 w-screen fixed top-0 z-10">
-      <button className="flex items-center w-52 gap-2.5">
+    <div className="bg-white px-4 md:px-10 flex py-4 border-b border-neutral-300 w-screen fixed top-0 z-10">
+      <button className="flex items-center lg:w-52 gap-2.5">
         <h1 className="font-semibold text-sm tracking-tight">Starbucks</h1>
         <DropDownIcon />
       </button>
 
-      <div className="flex justify-between flex-auto ml-8">
-        <SearchBox value={searchText} onChange={handleChange} />
-        <div className="flex items-center gap-6">
+      <div className="flex justify-between flex-auto md:ml-8 sm:ml-4 ">
+        <div className="hidden sm:block">
+          <SearchBox value={searchText} onChange={handleChange} />
+        </div>
+        <div className="flex items-center gap-6 ml-auto">
           <button>
             <BellIcon />
           </button>

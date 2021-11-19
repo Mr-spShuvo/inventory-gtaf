@@ -18,6 +18,11 @@ module.exports = {
           'Helvetica Neue',
           'sans-serif'
         ]
+      },
+      screens: {
+        xs: '390px',
+        sm: '640px',
+        md: '800px'
       }
     }
   },

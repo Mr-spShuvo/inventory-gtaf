@@ -2,5 +2,5 @@
 @import './tailwind.css';
 
 html {
-  @apply text-neutral-900;
+  @apply text-neutral-900 bg-neutral-200;
 }

@@ -1,5 +1,5 @@
 import { Redirect, Route, Switch } from 'react-router';
-import Header from './common/Header';
+import Header from './components/Header';
 import Layout from './common/Layout';
 import Dashboard from './pages/Dashboard';
 import Documents from './pages/Documents';
