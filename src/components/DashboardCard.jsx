@@ -18,11 +18,11 @@ export const DashboardCard = ({ title, heading, subHeading, index }) => {
         <FileIcon />
       </div>
       <div>
-        <h2 className="text-neutral-600 text-sm tracking-wide ">{title}</h2>
+        <h2 className="text-neutral-600 text-sm tracking-wide">{title}</h2>
         <p className="text-neutral-900 font-bold text-xl">
           {heading}
           {subHeading && (
-            <span className="ml-1 text-xs  font-medium inline-block px-3 py-1 bg-neutral-200 text-neutral-600 rounded-full ">
+            <span className="ml-1 text-xs  font-medium inline-block px-3 py-1 bg-neutral-200 text-neutral-600 rounded-full">
               {subHeading}
             </span>
           )}

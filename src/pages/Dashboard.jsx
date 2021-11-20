@@ -10,7 +10,7 @@ const data = [
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-wrap flex-auto gap-4 xl:gap-8 justify-between">
+    <div className="flex justify-between flex-wrap flex-auto gap-4 xl:gap-8">
       {data.map((item, index) => (
         <DashboardCard
           key={item.id}

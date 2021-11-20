@@ -10,7 +10,7 @@ const menu = [
 
 export const Sidebar = () => {
   return (
-    <ul className="flex w-full px-6 sm:px-0 justify-between sm:flex-col sm:justify-start gap-5 bg-white sm:bg-transparent fixed sm:relative bottom-0 left-0 sm:bottom sm:border-t sm:border-neutral-200 shadow-nav sm:shadow-none">
+    <ul className="flex w-full px-4 sm:px-0 justify-between sm:flex-col sm:justify-start gap-5 bg-white sm:bg-transparent fixed sm:relative bottom-0 left-0 sm:bottom sm:border-t sm:border-neutral-200 shadow-nav sm:shadow-none">
       {menu.map(item => (
         <li key={item.path} className="text-neutral-700 font-medium">
           <NavLink

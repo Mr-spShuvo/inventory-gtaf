@@ -16,7 +16,7 @@ export const Header = () => {
         <DropDownIcon />
       </button>
 
-      <div className="flex justify-between flex-auto md:ml-8 sm:ml-4 ">
+      <div className="flex justify-between flex-auto md:ml-8 sm:ml-4">
         <div className="hidden sm:block">
           <SearchBox value={searchText} onChange={handleChange} />
         </div>
