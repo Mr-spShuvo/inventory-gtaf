@@ -6,7 +6,7 @@ export const Layout = ({ title = '', children }) => {
   return (
     <div className="flex flex-col sm:flex-row min-h-screen pt-16 sm:pt-20">
       <div className="lg:w-72 border-r border-neutral-300 relative">
-        <div className="p-4 md:p-6 sticky left-0 top-24">
+        <div className="sm:p-4 md:p-6 sticky left-0 top-24">
           <Sidebar />
         </div>
       </div>

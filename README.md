@@ -2,12 +2,11 @@
 
 <p align="center">
   <img src="/public/logo512.png" width="30%">
-  <h1 align="center">Helps You Revive</h1>
 </p>
 
 ## About
 
-YogaVive is a local Yoga studio based on Khulna, Bangladesh. The owner reach out and ask me to build her a business landing page website for the small audiences she has, to promote her business as she has started taking her classes online, due to COVID-19. The main goal of this landing is to portrait what YogaVive stands for, what packages are available to join, what are the benefits, what results people got from YogaVive and of course the how to contact them.
+GTAF Inventory is dummy inventory management dashboard has built for Software Developer (Web frontend) position at Greentech Apps Foundation.
 
 ## Instructions
 
@@ -21,8 +20,8 @@ To run the project locally you have to install **`Nodejs`** version 14+. Clone t
 
 ## Preview
 
-This application is live @ **[yogavivebd.com](https://yogavivebd.com)**. Also a preview of the application has been included below:
+This application is live @ **[gtaf-inventory.netlify.app](https://gtaf-inventory.netlify.app/)**. Also, a preview of the application has been included below:
 
 <p align="center">
-  <img src="screenshot.gif" alt="YogaVive Preview" title="YogaVive Preview">
+  <img src="screenshot.gif" alt="GTAF inventory Preview" title="GTAF inventory Preview">
 </p>
