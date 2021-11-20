@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Checkbox } from '../common';
 import { getInventoryStatus } from '../utils';
 
@@ -57,4 +59,8 @@ export const InventoryDataTable = ({ data }) => {
       </tbody>
     </table>
   );
+};
+
+InventoryDataTable.propTypes = {
+  data: PropTypes.array.isRequired
 };

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { getDashboardCardColors } from '../utils';
 
 import { FileIcon } from '../assets/icons';
@@ -28,4 +30,11 @@ export const DashboardCard = ({ title, heading, subHeading, index }) => {
       </div>
     </div>
   );
+};
+
+DashboardCard.propTypes = {
+  title: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
+  subHeading: PropTypes.string,
+  index: PropTypes.number.isRequired
 };

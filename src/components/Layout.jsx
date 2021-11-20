@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Sidebar } from './Sidebar';
 
 export const Layout = ({ title = '', children }) => {
@@ -17,4 +19,9 @@ export const Layout = ({ title = '', children }) => {
       </div>
     </div>
   );
+};
+
+Layout.propTypes = {
+  title: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
 };

@@ -5,9 +5,12 @@ import { InventoryDataTable } from '../components';
 import { getPaginateData } from '../utils';
 
 const Inventory = () => {
+  const [searchText, setSearchText] = useState('');
   const [inventoryData, setInventoryData] = useState([]);
   const [data, setData] = useState([]);
   const [pagination, setPagination] = useState({ perPage: 10, currentPage: 1 });
+
+  const handleSearchTextChange = e => setSearchText(e.target.value);
 
   useEffect(() => {
     setInventoryData(() => require('../data/inventory.json'));
@@ -45,7 +48,7 @@ const Inventory = () => {
   return (
     <div className="bg-white rounded 2xl:rounded-md shadow-card">
       <div className="p-6">
-        <SearchBox />
+        <SearchBox value={searchText} onChange={handleSearchTextChange} />
       </div>
       <InventoryDataTable data={data} />
       <Pagination
