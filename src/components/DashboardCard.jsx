@@ -2,7 +2,7 @@ import React from 'react';
 import { FileIcon } from '../assets/icons';
 import { getDashboardCardColors } from '../utils';
 
-const DashboardCard = ({ title, heading, subHeading, index }) => {
+export const DashboardCard = ({ title, heading, subHeading, index }) => {
   const { text, background } = getDashboardCardColors(index);
   return (
     <div
@@ -29,5 +29,3 @@ const DashboardCard = ({ title, heading, subHeading, index }) => {
     </div>
   );
 };
-
-export default DashboardCard;

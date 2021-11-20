@@ -1,6 +1,6 @@
-import Sidebar from '../components/Sidebar';
+import { Sidebar } from './Sidebar';
 
-const Layout = ({ title = '', children }) => {
+export const Layout = ({ title = '', children }) => {
   return (
     <div className="flex flex-col sm:flex-row min-h-screen mt-16 sm:mt-20">
       <div className="lg:w-72 pt-8 px-2 border-r border-neutral-300 relative">
@@ -18,5 +18,3 @@ const Layout = ({ title = '', children }) => {
     </div>
   );
 };
-
-export default Layout;

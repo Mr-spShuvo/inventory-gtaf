@@ -8,7 +8,7 @@ const menu = [
   { title: 'Settings', icon: <GearIcon />, path: '/settings' }
 ];
 
-const Sidebar = () => {
+export const Sidebar = () => {
   return (
     <ul className="flex justify-between sm:flex-col sm:justify-start gap-7 bg-white sm:bg-transparent fixed sm:relative bottom-0 left-0 sm:bottom drop-shadow-2xl border-t border-neutral-200">
       {menu.map(item => (
@@ -26,5 +26,3 @@ const Sidebar = () => {
     </ul>
   );
 };
-
-export default Sidebar;

@@ -1,11 +1,41 @@
-const colors = require('./src/data/colors.json');
-
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false,
   theme: {
     extend: {
-      colors,
+      colors: {
+        primary: {
+          100: '#EFFBF0',
+          500: '#00C614'
+        },
+        neutral: {
+          100: '#F9F9FA',
+          200: '#F2F2F3',
+          300: '#E5E5E6',
+          400: '#D2D2D5',
+          500: '#B2B2B6',
+          600: '#88898E',
+          700: '#6B6C72',
+          900: '#3E3F48'
+        },
+        success: {
+          100: '#F1FDF6',
+          200: '#E8F7EE',
+          300: '#82DDA5',
+          500: '#44C776'
+        },
+        error: {
+          100: '#FBEFF0',
+          500: '#F52828'
+        },
+        warning: {
+          100: '#FDF4ED',
+          500: '#F58A28',
+          600: '#F58829',
+          700: '#E3920F'
+        },
+        white: '#fff'
+      },
       fontFamily: {
         sans: [
           'Inter',

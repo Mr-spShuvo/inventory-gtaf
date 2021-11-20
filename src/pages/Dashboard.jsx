@@ -1,4 +1,4 @@
-import DashboardCard from '../components/DashboardCard';
+import { DashboardCard } from '../components';
 
 const data = [
   { id: 1, title: 'Summary', amount: '$2,12,200.10', quantity: '100' },

@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import SearchBox from '../common/SearchBox';
+
 import { DropDownIcon, BellIcon } from '../assets/icons';
 import UserAvatar from '../assets/user.png';
-import SearchBox from './SearchBox';
 
-const Header = () => {
+export const Header = () => {
   const [searchText, setSearchText] = useState();
 
   const handleChange = e => {
@@ -35,5 +36,3 @@ const Header = () => {
     </div>
   );
 };
-
-export default Header;

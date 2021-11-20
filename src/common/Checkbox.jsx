@@ -1,4 +1,4 @@
-const Checkbox = ({ label = '' }) => {
+export const Checkbox = ({ label = '' }) => {
   return (
     <>
       <input
@@ -9,5 +9,3 @@ const Checkbox = ({ label = '' }) => {
     </>
   );
 };
-
-export default Checkbox;
