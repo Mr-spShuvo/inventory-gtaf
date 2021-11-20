@@ -1,7 +1,7 @@
 #
 
 <p align="center">
-  <img src="/public/logo512.png" width="30%">
+  <img src="/public/logo-wide.png" width="30%">
 </p>
 
 ## About
