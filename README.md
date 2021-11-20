@@ -6,7 +6,7 @@
 
 ## About
 
-GTAF Inventory is dummy inventory management dashboard has built for Software Developer (Web frontend) position at Greentech Apps Foundation.
+GTAF Inventory is dummy inventory management dashboard has been built for the Software Developer (Web frontend) position at Greentech Apps Foundation.
 
 ## Instructions
 
