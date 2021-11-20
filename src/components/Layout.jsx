@@ -10,8 +10,8 @@ export const Layout = ({ title = '', children }) => {
       </div>
 
       <div className="w-full">
-        <div class="border-b border-neutral-300 p-6">
-          <h1 class="font-bold text-xl">{title}</h1>
+        <div className="border-b border-neutral-300 p-6">
+          <h1 className="font-bold text-xl">{title}</h1>
         </div>
         <div className="p-6">{children}</div>
       </div>

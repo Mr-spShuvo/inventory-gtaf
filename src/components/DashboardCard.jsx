@@ -1,6 +1,6 @@
-import React from 'react';
-import { FileIcon } from '../assets/icons';
 import { getDashboardCardColors } from '../utils';
+
+import { FileIcon } from '../assets/icons';
 
 export const DashboardCard = ({ title, heading, subHeading, index }) => {
   const { text, background } = getDashboardCardColors(index);

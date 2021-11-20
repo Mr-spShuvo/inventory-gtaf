@@ -23,7 +23,7 @@ export const Pagination = ({ pagination, onPageChange, onPerPageChange, onPageJu
             onChange={onPageJump}
           >
             {_.range(1, data.length / pagination.perPage + 1).map(item => (
-              <option value={item}>
+              <option key={item} value={item}>
                 Page {item} of {Math.ceil(data.length / pagination.perPage)}
               </option>
             ))}

@@ -2,16 +2,12 @@ import { useState, useEffect } from 'react';
 
 import { Pagination, SearchBox } from '../common';
 import { InventoryDataTable } from '../components';
-
 import { getPaginateData } from '../utils';
 
 const Inventory = () => {
   const [inventoryData, setInventoryData] = useState([]);
   const [data, setData] = useState([]);
-  const [pagination, setPagination] = useState({
-    perPage: 5,
-    currentPage: 1
-  });
+  const [pagination, setPagination] = useState({ perPage: 10, currentPage: 1 });
 
   useEffect(() => {
     setInventoryData(() => require('../data/inventory.json'));
@@ -21,16 +17,6 @@ const Inventory = () => {
     const data = getPaginateData(inventoryData, pagination.currentPage, pagination.perPage);
     setData(data);
   }, [inventoryData, pagination.currentPage, pagination.perPage]);
-
-  const handlePerPageChange = e =>
-    setPagination(pagination => ({ ...pagination, perPage: e.target.value }));
-
-  const handlePageJump = e => {
-    setPagination(pagination => ({
-      ...pagination,
-      currentPage: e.target.value
-    }));
-  };
 
   const handlePageChange = type => {
     if (pagination.currentPage <= 1 && type === 'prev') return;
@@ -42,6 +28,19 @@ const Inventory = () => {
       currentPage: type === 'prev' ? pagination.currentPage - 1 : pagination.currentPage + 1
     }));
   };
+
+  const handlePerPageChange = e =>
+    setPagination(pagination => ({
+      ...pagination,
+      perPage: e.target.value,
+      currentPage: 1
+    }));
+
+  const handlePageJump = e =>
+    setPagination(pagination => ({
+      ...pagination,
+      currentPage: e.target.value
+    }));
 
   return (
     <div className="bg-white rounded">

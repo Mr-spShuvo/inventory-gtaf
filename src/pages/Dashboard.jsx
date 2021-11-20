@@ -1,9 +1,11 @@
+import { nanoid } from 'nanoid';
+
 import { DashboardCard } from '../components';
 
 const data = [
-  { id: 1, title: 'Summary', amount: '$2,12,200.10', quantity: '100' },
-  { id: 2, title: 'Total Out of Stock', amount: '30' },
-  { id: 3, title: 'Order made', amount: '$2,030.10', quantity: '10' }
+  { id: nanoid(), title: 'Summary', amount: '$2,12,200.10', quantity: '100' },
+  { id: nanoid(), title: 'Total Out of Stock', amount: '30' },
+  { id: nanoid(), title: 'Order made', amount: '$2,030.10', quantity: '10' }
 ];
 
 const Dashboard = () => {

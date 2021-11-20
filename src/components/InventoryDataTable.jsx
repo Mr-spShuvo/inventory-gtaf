@@ -1,7 +1,7 @@
-import React from 'react';
-import { ArrowDownIcon, ArrowSortIcon } from '../assets/icons';
 import { Checkbox } from '../common';
 import { getInventoryStatus } from '../utils';
+
+import { ArrowDownIcon, ArrowSortIcon } from '../assets/icons';
 
 export const InventoryDataTable = ({ data }) => {
   return (
@@ -31,8 +31,8 @@ export const InventoryDataTable = ({ data }) => {
         </tr>
       </thead>
       <tbody>
-        {data.map(({ title, updatedOn, details, status, stock, total, unitPrice }) => (
-          <tr className="text-left">
+        {data.map(({ id, title, updatedOn, details, status, stock, total, unitPrice }) => (
+          <tr className="text-left" key={id}>
             <th className="py-6 pl-6 pr-8 w-4 hidden md:table-cell">
               <Checkbox />
             </th>

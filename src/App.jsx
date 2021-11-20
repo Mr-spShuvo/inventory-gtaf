@@ -9,7 +9,7 @@ import Settings from './pages/Settings';
 
 function App() {
   return (
-    <div className="bg-neutral-200">
+    <>
       <Header />
       <Switch>
         <Route path="/dashboard">
@@ -36,7 +36,7 @@ function App() {
           <Redirect to="/dashboard" />
         </Route>
       </Switch>
-    </div>
+    </>
   );
 }
 
