@@ -6,7 +6,7 @@ export const DashboardCard = ({ title, heading, subHeading, index }) => {
   const { text, background } = getDashboardCardColors(index);
   return (
     <div
-      className={`flex w-full gap-2 xl:gap-4 px-6 py-10 bg-white rounded-sm xl:rounded-md shadow-lg ${
+      className={`flex w-full gap-2 xl:gap-4 px-6 py-10 bg-white rounded 2xl:rounded-md shadow-card ${
         index === 0 ? 'flex-auto lg:flex-1' : 'flex-auto: sm:flex-1'
       }`}
     >

@@ -7,7 +7,7 @@ export const InventoryDataTable = ({ data }) => {
   return (
     <table className="table-auto w-full align-middle">
       <thead className="bg-warning-100">
-        <tr className="py-4 text-left text-sm ">
+        <tr className="py-4 text-left text-sm">
           <th className="py-4 pl-6 pr-8 w-4 hidden md:table-cell">
             <Checkbox />
           </th>
@@ -32,7 +32,7 @@ export const InventoryDataTable = ({ data }) => {
       </thead>
       <tbody>
         {data.map(({ id, title, updatedOn, details, status, stock, total, unitPrice }) => (
-          <tr className="text-left" key={id}>
+          <tr className="text-left hover:bg-primary-100" key={id}>
             <th className="py-6 pl-6 pr-8 w-4 hidden md:table-cell">
               <Checkbox />
             </th>

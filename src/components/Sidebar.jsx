@@ -10,13 +10,13 @@ const menu = [
 
 export const Sidebar = () => {
   return (
-    <ul className="flex justify-between sm:flex-col sm:justify-start gap-7 bg-white sm:bg-transparent fixed sm:relative bottom-0 left-0 sm:bottom drop-shadow-2xl border-t border-neutral-200">
+    <ul className="flex w-full px-6 sm:px-0 justify-between sm:flex-col sm:justify-start gap-5 bg-white sm:bg-transparent fixed sm:relative bottom-0 left-0 sm:bottom sm:border-t sm:border-neutral-200 shadow-nav sm:shadow-none">
       {menu.map(item => (
         <li key={item.path} className="text-neutral-700 font-medium">
           <NavLink
             to={item.path}
-            activeClassName="text-primary-500 bg-white shadow-sm border-neutral-300"
-            className="inline-flex lg:w-full gap-2.5 p-4 transition-all hover:text-primary-500 hover:bg-white hover:shadow-sm hover:border-neutral-300 border-b-2 border-transparent rounded-md"
+            activeClassName="text-primary-500 bg-white sm:shadow-nav-item border-neutral-300"
+            className="flex lg:w-full gap-2.5 p-4 transition-all hover:text-primary-500 hover:bg-white sm:hover:shadow-nav-item hover:border-neutral-300 border-b-2 border-transparent rounded-md"
           >
             {item.icon}
             <span className="hidden lg:inline-block">{item.title}</span>

@@ -43,7 +43,7 @@ const Inventory = () => {
     }));
 
   return (
-    <div className="bg-white rounded">
+    <div className="bg-white rounded 2xl:rounded-md shadow-card">
       <div className="p-6">
         <SearchBox />
       </div>

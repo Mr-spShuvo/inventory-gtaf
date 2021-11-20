@@ -53,6 +53,11 @@ module.exports = {
         xs: '390px',
         sm: '640px',
         md: '800px'
+      },
+      boxShadow: {
+        nav: '0px -4px 2px rgba(0, 0, 0, 0.09)',
+        'nav-item': '0px 3px 1px rgba(20, 40, 82, 0.08), 0px 24px 24px rgba(20, 40, 82, 0.04)',
+        card: ' 0px 5px 4px rgba(20, 40, 82, 0.08), 0px 24px 24px rgba(20, 40, 82, 0.04)'
       }
     }
   },
